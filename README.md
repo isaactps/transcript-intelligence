@@ -35,7 +35,6 @@ The full narrative is in [`docs/Transcript_Intelligence_Findings.pdf`](docs/Tran
 transcript-intelligence/
 ├── .github/workflows/ci.yml       ← lint + tests on push
 ├── docs/
-│   ├── DEMO_SCRIPT.md             ← 7-minute timed walkthrough script
 │   ├── Transcript_Intelligence_Findings.pptx
 │   ├── Transcript_Intelligence_Findings.pdf
 │   └── figures/                   ← chart PNGs used in the deck
@@ -90,12 +89,12 @@ pip install -r requirements-dev.txt
 
 ## Run
 
-The dataset ships **outside** the repo (it's not source). Point the scripts at it via `--data`.
+The dataset is included inside the repo. Point the scripts at it via `--data`.
 
 ### End-to-end pipeline → CSVs + insights.json
 
 ```bash
-ti-pipeline --data /path/to/dataset --out outputs/
+ti-pipeline --data dataset --out outputs/
 # or, equivalently
 python scripts/run_pipeline.py --data dataset --out outputs/
 ```
@@ -131,13 +130,6 @@ ti-walkthrough --data dataset
 
 This is the closest equivalent to "run the notebook top-to-bottom" — every analysis module
 prints a representative DataFrame, in order, with banners.
-
-### Regenerate the slide deck (optional — checked-in PPTX is current)
-
-```bash
-cd scripts && npm install pptxgenjs && node build_deck.js
-# writes ../docs/Transcript_Intelligence_Findings.pptx
-```
 
 ### Regenerate the csv and text files that provides the classification to each of the data samples in the data set
 
@@ -189,13 +181,6 @@ the most novel piece, and the most leadership-shaped output.
 - Speaker→domain mapping is best-effort. Tested OK on this dataset (~57/43 split on customer calls).
 - Churn-risk weights are equal across the four signals (heuristic). With churn outcomes as labels, train weights instead.
 - Privacy: any production version needs proper access controls, redaction, and audit logs from day one.
-
-## A note on the video deliverable
-
-The brief asks for a 5-10 minute video walkthrough. Since this submission is a code repo, I
-include [`docs/DEMO_SCRIPT.md`](docs/DEMO_SCRIPT.md) — a fully-timed 7-minute teleprompter
-script covering exactly what I would narrate over a screen recording, including expected Q&A.
-Happy to record it live during the panel.
 
 ## License
 
