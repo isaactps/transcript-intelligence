@@ -1,0 +1,926 @@
+==============================================================================
+CALL-TYPE CLASSIFICATION — transcript samples
+==============================================================================
+
+Each transcript folder is classified into one of three call types:
+
+    SUPPORT  — a customer reaching out about a specific issue / ticket
+    EXTERNAL — Aegis account team in conversation with a customer
+               (renewal, QBR, onboarding, planning, etc.)
+    INTERNAL — Aegis-only meeting (standup, planning, postmortem, all-hands)
+
+Classification rules (applied in priority order):
+
+    1. Title contains 'Support Case' / 'Ticket'  → SUPPORT
+    2. Title starts with 'Aegis / <Customer>'    → EXTERNAL
+    3. Any non-aegiscloud.com attendee email     → EXTERNAL
+    4. Internal-meeting keyword in title          → INTERNAL
+    5. Otherwise (Aegis-only attendees)           → INTERNAL
+
+Total samples: 100
+  SUPPORT  :  27 samples
+  EXTERNAL :  43 samples
+  INTERNAL :  30 samples
+
+==============================================================================
+
+[  1/100]  01KQ03B0303900521BB089CA
+          Title       : Detect Outage - Remediation Plan Review
+          Call type   : INTERNAL
+          Confidence  : 0.8
+          Reason      : only Aegis attendees, no other strong signal
+          Attendees   : 3 (customer domains: (none — Aegis only))
+          Started UTC : 2026-03-16T09:30:00+00:00
+          Duration    : 35.2 min
+
+[  2/100]  01KQ0C1280EDA4E70AAD7C35
+          Title       : Support Case #9279 - Summit Trust Billing Inquiry
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 2 (customer domains: summittrust.com)
+          Started UTC : 2026-02-06T09:15:00+00:00
+          Duration    : 23.8 min
+
+[  3/100]  01KQ0CAE7F064EC93F0540CA
+          Title       : Weekly Engineering Standup
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 4 (customer domains: (none — Aegis only))
+          Started UTC : 2026-02-16T10:00:00+00:00
+          Duration    : 29.0 min
+
+[  4/100]  01KQ0DFE299AC7A74E8022CA
+          Title       : Aegis / Redwood Clinical - ISO 27001 Preparation
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: redwoodclinical.com)
+          Started UTC : 2026-04-26T13:30:00+00:00
+          Duration    : 28.8 min
+
+[  5/100]  01KQ0F8AFF3DA34FD4580008
+          Title       : Aegis / Cobalt Software - Q2 Planning
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 2 (customer domains: cobaltsoftware.com)
+          Started UTC : 2026-04-11T14:15:00+00:00
+          Duration    : 41.2 min
+
+[  6/100]  01KQ1267C6AA7D9B3125FEC8
+          Title       : SOC 2 Audit Preparation - Internal
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 5 (customer domains: (none — Aegis only))
+          Started UTC : 2026-02-26T10:15:00+00:00
+          Duration    : 36.9 min
+
+[  7/100]  01KQ1A6B7E81B06F4A13B60D
+          Title       : Support Case #6977 - Brightpath Commerce Slow Backup Performance
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 2 (customer domains: brightpathcommerce.com)
+          Started UTC : 2026-02-21T11:30:00+00:00
+          Duration    : 15.8 min
+
+[  8/100]  01KQ1DC6CA536DE1B31ED8F5
+          Title       : Aegis / Atlas Precision - Contract Discussion
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: atlasprecision.com)
+          Started UTC : 2026-02-25T15:00:00+00:00
+          Duration    : 33.5 min
+
+[  9/100]  01KQ1DCC80852AE384C898C9
+          Title       : Aegis / Quantum Edge - Renewal Concerns
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: quantumedge.com)
+          Started UTC : 2026-03-19T16:00:00+00:00
+          Duration    : 45.0 min
+
+[ 10/100]  01KQ1DE954A807A5D2653175
+          Title       : Comply v2 - Launch Readiness Review
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 2 (customer domains: (none — Aegis only))
+          Started UTC : 2026-03-24T14:45:00+00:00
+          Duration    : 39.3 min
+
+[ 11/100]  01KQ2217B066855A3B7814CB
+          Title       : Aegis / Meridian Capital - Service Reliability Discussion
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 4 (customer domains: meridiancapital.com)
+          Started UTC : 2026-03-14T11:45:00+00:00
+          Duration    : 43.4 min
+
+[ 12/100]  01KQ2331EFD78BF3B1CAB747
+          Title       : Detect Outage - Customer Impact Assessment
+          Call type   : INTERNAL
+          Confidence  : 0.8
+          Reason      : only Aegis attendees, no other strong signal
+          Attendees   : 4 (customer domains: (none — Aegis only))
+          Started UTC : 2026-03-12T13:45:00+00:00
+          Duration    : 48.0 min
+
+[ 13/100]  01KQ25D8AED944B5D2A9FF60
+          Title       : Support Case #1514 - Meridian Capital Granular Restore Request
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 2 (customer domains: meridiancapital.com)
+          Started UTC : 2026-03-26T14:00:00+00:00
+          Duration    : 19.3 min
+
+[ 14/100]  01KQ298F2846EFE59B0D70E2
+          Title       : Competitive Threat Assessment - Post Outage
+          Call type   : INTERNAL
+          Confidence  : 0.8
+          Reason      : only Aegis attendees, no other strong signal
+          Attendees   : 5 (customer domains: (none — Aegis only))
+          Started UTC : 2026-03-20T15:30:00+00:00
+          Duration    : 26.2 min
+
+[ 15/100]  01KQ2B4878EC7B3EE5547007
+          Title       : Aegis / Stratos Cloud - Audit Preparation
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: stratoscloud.io)
+          Started UTC : 2026-03-06T13:30:00+00:00
+          Duration    : 23.3 min
+
+[ 16/100]  01KQ2D93184912F0147315E7
+          Title       : URGENT: Blackridge Investments - Complete Loss of Threat Visibility
+          Call type   : EXTERNAL
+          Confidence  : 0.9
+          Reason      : non-Aegis attendees: ['blackridgeinvest.com']
+          Attendees   : 2 (customer domains: blackridgeinvest.com)
+          Started UTC : 2026-03-12T15:45:00+00:00
+          Duration    : 21.1 min
+
+[ 17/100]  01KQ31ED026F745FE2A55CCD
+          Title       : Identity Team - Q2 Roadmap
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 5 (customer domains: (none — Aegis only))
+          Started UTC : 2026-04-13T11:45:00+00:00
+          Duration    : 47.6 min
+
+[ 18/100]  01KQ325BDEDEE927D2970775
+          Title       : Support Case #5889 - Ridgeline Logistics Detect Latency Issues
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 2 (customer domains: ridgelinelogistics.com)
+          Started UTC : 2026-03-14T17:15:00+00:00
+          Duration    : 11.4 min
+
+[ 19/100]  01KQ351E141926AB7CAB668D
+          Title       : Aegis / Northstar Pharma - Urgent: Detect Outage Impact
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 2 (customer domains: northstarpharma.com)
+          Started UTC : 2026-03-12T12:15:00+00:00
+          Duration    : 48.1 min
+
+[ 20/100]  01KQ38C4101D6774F2F02331
+          Title       : INCIDENT: Detect Pipeline Failure - War Room
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 4 (customer domains: (none — Aegis only))
+          Started UTC : 2026-03-10T13:15:00+00:00
+          Duration    : 29.9 min
+
+[ 21/100]  01KQ38FE02AEE5AA5157F042
+          Title       : Support Case #3296 - Pinnacle Insurance Comply v2 Report Formatting Issue
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 2 (customer domains: pinnacleins.com)
+          Started UTC : 2026-04-08T15:15:00+00:00
+          Duration    : 14.1 min
+
+[ 22/100]  01KQ3BD8DEEBC7FECD107F0F
+          Title       : Aegis / Blackridge Investments - HIPAA Compliance Review
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 4 (customer domains: blackridgeinvest.com)
+          Started UTC : 2026-04-21T14:15:00+00:00
+          Duration    : 49.1 min
+
+[ 23/100]  01KQ3C837D7EF689408DCF95
+          Title       : Support Case #2638 - Pineridge Systems CloudPrime S3 Backup Connector
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 3 (customer domains: pineridge.io)
+          Started UTC : 2026-03-04T10:15:00+00:00
+          Duration    : 19.1 min
+
+[ 24/100]  01KQ3CE40428CCC5FF433FFC
+          Title       : Detect Outage - Post-Incident Review
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 3 (customer domains: (none — Aegis only))
+          Started UTC : 2026-03-18T16:30:00+00:00
+          Duration    : 21.4 min
+
+[ 25/100]  01KQ3D8C1EF16C042F31FAFD
+          Title       : Aegis / Trailhead Marketplace - Renewal Confirmation
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: trailheadmkt.com)
+          Started UTC : 2026-04-05T14:30:00+00:00
+          Duration    : 46.6 min
+
+[ 26/100]  01KQ3F90FF9EBC3DB3632514
+          Title       : Identity Team - Sprint Retro
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 4 (customer domains: (none — Aegis only))
+          Started UTC : 2026-03-28T16:00:00+00:00
+          Duration    : 26.0 min
+
+[ 27/100]  01KQ410FB7E434BA3F99EE7D
+          Title       : Aegis / Axiom Labs - Multi-Year Renewal
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: axiomlabs.dev)
+          Started UTC : 2026-04-17T09:45:00+00:00
+          Duration    : 48.8 min
+
+[ 28/100]  01KQ41FB5CCFD9EA583FB020
+          Title       : Aegis / Harborview Banking - Threat Detection Tuning
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 4 (customer domains: harborviewbank.com)
+          Started UTC : 2026-03-05T15:30:00+00:00
+          Duration    : 36.3 min
+
+[ 29/100]  01KQ445B1B5B890316C9E300
+          Title       : Weekly Engineering Standup
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 3 (customer domains: (none — Aegis only))
+          Started UTC : 2026-04-17T17:15:00+00:00
+          Duration    : 45.2 min
+
+[ 30/100]  01KQ4529010F423FD9DB40BD
+          Title       : Win/Loss Analysis - Q1
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 4 (customer domains: (none — Aegis only))
+          Started UTC : 2026-04-24T12:45:00+00:00
+          Duration    : 16.5 min
+
+[ 31/100]  01KQ45C0AD36B351A3571940
+          Title       : Aegis / Silverline Brands - Comply v2 Early Access Demo
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 2 (customer domains: silverlinebrands.com)
+          Started UTC : 2026-04-03T15:15:00+00:00
+          Duration    : 50.3 min
+
+[ 32/100]  01KQ45C76AF3AEA6B3EA6697
+          Title       : Aegis / Steelpoint Manufacturing - Contract Review
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: steelpointmfg.com)
+          Started UTC : 2026-03-24T17:45:00+00:00
+          Duration    : 34.6 min
+
+[ 33/100]  01KQ45F6F7349D0A620571F1
+          Title       : Aegis / Brightpath Commerce - Competitive Evaluation
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 2 (customer domains: brightpathcommerce.com)
+          Started UTC : 2026-04-22T15:30:00+00:00
+          Duration    : 21.0 min
+
+[ 34/100]  01KQ46A9DE0AECB006D897A0
+          Title       : Detect Outage - Escalation Bridge
+          Call type   : INTERNAL
+          Confidence  : 0.8
+          Reason      : only Aegis attendees, no other strong signal
+          Attendees   : 3 (customer domains: (none — Aegis only))
+          Started UTC : 2026-03-11T11:00:00+00:00
+          Duration    : 17.1 min
+
+[ 35/100]  01KQ4D01DCB15C69672AB5AF
+          Title       : Aegis / Clearwater Medical - Comply v2 Deployment Kickoff
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 5 (customer domains: clearwatermed.com)
+          Started UTC : 2026-04-07T14:15:00+00:00
+          Duration    : 42.8 min
+
+[ 36/100]  01KQ4D504CE09A8F6ECA1F5A
+          Title       : Product Sync - Identity Roadmap
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 3 (customer domains: (none — Aegis only))
+          Started UTC : 2026-02-09T17:30:00+00:00
+          Duration    : 39.4 min
+
+[ 37/100]  01KQ4D71CDFB1045A2458216
+          Title       : Aegis / Bridgeport Health - Renewal Finalization
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 4 (customer domains: bridgeporthealth.com)
+          Started UTC : 2026-04-23T13:30:00+00:00
+          Duration    : 39.5 min
+
+[ 38/100]  01KQ4EE836687F95080D92AB
+          Title       : Detect Team - Sprint Planning
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 4 (customer domains: (none — Aegis only))
+          Started UTC : 2026-02-05T14:15:00+00:00
+          Duration    : 25.6 min
+
+[ 39/100]  01KQ51DC4345D9DAE005678C
+          Title       : Aegis / Redwood Clinical - Product Feedback Session
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: redwoodclinical.com)
+          Started UTC : 2026-02-22T13:15:00+00:00
+          Duration    : 40.3 min
+
+[ 40/100]  01KQ54917E3931712516916D
+          Title       : Aegis / Nimbus Platform - Comply v2 Preview
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 2 (customer domains: nimbusplatform.com)
+          Started UTC : 2026-04-01T16:15:00+00:00
+          Duration    : 54.3 min
+
+[ 41/100]  01KQ560FF1570C5E7F71D752
+          Title       : Aegis / Coastal Living Co - Protect Module Expansion
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 2 (customer domains: coastalliving.com)
+          Started UTC : 2026-04-19T15:15:00+00:00
+          Duration    : 45.7 min
+
+[ 42/100]  01KQ56786DD1E8A1BF174FDD
+          Title       : Support Case #1993 - Forge Industries Comply v2 Early Access Question
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 4 (customer domains: forgeindustries.com)
+          Started UTC : 2026-04-03T15:30:00+00:00
+          Duration    : 25.6 min
+
+[ 43/100]  01KQ56AA6B60801ABC01AB1C
+          Title       : Support Case #8179 - Clearwater Medical Overage Charges Dispute
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 4 (customer domains: clearwatermed.com)
+          Started UTC : 2026-04-10T17:30:00+00:00
+          Duration    : 21.5 min
+
+[ 44/100]  01KQ56D878454E5783DC6D94
+          Title       : Support Case #3536 - Stratos Cloud LogVault Integration Timeout
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 3 (customer domains: stratoscloud.io)
+          Started UTC : 2026-04-22T12:30:00+00:00
+          Duration    : 12.8 min
+
+[ 45/100]  01KQ5A966832A146DA4B7D41
+          Title       : Aegis / Summit Trust - Platform Concerns Discussion
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 2 (customer domains: summittrust.com)
+          Started UTC : 2026-03-26T16:00:00+00:00
+          Duration    : 53.0 min
+
+[ 46/100]  01KQ5AFAE8264DDC0ED2AE7F
+          Title       : Aegis / Crestline Wealth - Identity Module Deployment
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: crestlinewealth.com)
+          Started UTC : 2026-04-24T16:45:00+00:00
+          Duration    : 35.7 min
+
+[ 47/100]  01KQ5BB8521F99E55470206E
+          Title       : Detect Team - Sprint Planning
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 5 (customer domains: (none — Aegis only))
+          Started UTC : 2026-03-02T09:15:00+00:00
+          Duration    : 25.1 min
+
+[ 48/100]  01KQ5D47170D4828E89EDE37
+          Title       : Support Case #7537 - Forge Industries Detect Recovery Confirmation
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 2 (customer domains: forgeindustries.com)
+          Started UTC : 2026-03-18T14:45:00+00:00
+          Duration    : 27.8 min
+
+[ 49/100]  01KQ5EC1665DCFD7A6B62A59
+          Title       : Support Case #8749 - Coastal Living Co SAML Certificate Rotation Bug
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 3 (customer domains: coastalliving.com)
+          Started UTC : 2026-03-29T15:15:00+00:00
+          Duration    : 10.1 min
+
+[ 50/100]  01KQ5F364545B542671FF9CE
+          Title       : Support Case #3546 - Meridian Capital SCIM Provisioning Request
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 4 (customer domains: meridiancapital.com)
+          Started UTC : 2026-03-07T13:30:00+00:00
+          Duration    : 21.3 min
+
+[ 51/100]  01KQ65D43540846FA994B6C4
+          Title       : Aegis / Frostbyte AI - Product Feedback
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: frostbyte.ai)
+          Started UTC : 2026-04-25T14:45:00+00:00
+          Duration    : 39.4 min
+
+[ 52/100]  01KQ68FB3E9E60C4477CDAB4
+          Title       : Comply v2 - GA Deployment Plan
+          Call type   : INTERNAL
+          Confidence  : 0.8
+          Reason      : only Aegis attendees, no other strong signal
+          Attendees   : 4 (customer domains: (none — Aegis only))
+          Started UTC : 2026-04-01T17:45:00+00:00
+          Duration    : 29.5 min
+
+[ 53/100]  01KQ6A5CEAAFFBE3B0099E75
+          Title       : Support Case #6539 - Steelpoint Manufacturing LDAP Sync Failures
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 2 (customer domains: steelpointmfg.com)
+          Started UTC : 2026-03-22T09:15:00+00:00
+          Duration    : 20.9 min
+
+[ 54/100]  01KQ6CAA850EAFDC48B52846
+          Title       : Aegis / Ironworks Corp - Vendor Comparison Discussion
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: ironworkscorp.com)
+          Started UTC : 2026-04-14T13:45:00+00:00
+          Duration    : 33.9 min
+
+[ 55/100]  01KQ764171AC27A3A94DC695
+          Title       : Detect Reliability - 30-Day Review
+          Call type   : INTERNAL
+          Confidence  : 0.8
+          Reason      : only Aegis attendees, no other strong signal
+          Attendees   : 3 (customer domains: (none — Aegis only))
+          Started UTC : 2026-04-07T13:45:00+00:00
+          Duration    : 45.8 min
+
+[ 56/100]  01KQ773D68723289E4A98889
+          Title       : Support Case #7572 - Brightpath Commerce Invoice Discrepancy
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 3 (customer domains: brightpathcommerce.com)
+          Started UTC : 2026-02-27T13:00:00+00:00
+          Duration    : 12.6 min
+
+[ 57/100]  01KQ77F2867FC54E13A8C495
+          Title       : Aegis / Brightpath Commerce - Detect Module Deployment
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 2 (customer domains: brightpathcommerce.com)
+          Started UTC : 2026-02-11T09:15:00+00:00
+          Duration    : 45.8 min
+
+[ 58/100]  01KQ7B802912366FC0A24D4F
+          Title       : All Hands - April Update
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 5 (customer domains: (none — Aegis only))
+          Started UTC : 2026-04-26T11:45:00+00:00
+          Duration    : 48.8 min
+
+[ 59/100]  01KQ7BF0D56037FF89DC89B6
+          Title       : Support Case #3266 - Trailhead Marketplace Detect Alerts Not Firing
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 3 (customer domains: trailheadmkt.com)
+          Started UTC : 2026-03-11T17:45:00+00:00
+          Duration    : 10.0 min
+
+[ 60/100]  01KQ7F58A2E07B857C24624D
+          Title       : Competitive Landscape Review
+          Call type   : INTERNAL
+          Confidence  : 0.8
+          Reason      : only Aegis attendees, no other strong signal
+          Attendees   : 2 (customer domains: (none — Aegis only))
+          Started UTC : 2026-02-19T09:15:00+00:00
+          Duration    : 20.2 min
+
+[ 61/100]  01KQ7FA71CF70FAFEE4B6251
+          Title       : Aegis / Nova Retail Group - Renewal Discussion
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 2 (customer domains: novaretail.com)
+          Started UTC : 2026-03-21T11:15:00+00:00
+          Duration    : 33.4 min
+
+[ 62/100]  01KQ85D10E82A26A8F754FB8
+          Title       : Aegis / Bridgeport Health - Compliance Review
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: bridgeporthealth.com)
+          Started UTC : 2026-02-13T11:00:00+00:00
+          Duration    : 33.4 min
+
+[ 63/100]  01KQ88B8EAEAA819C26CCBE7
+          Title       : ESCALATION: Northstar Pharma - Detect Outage Impact on Compliance
+          Call type   : EXTERNAL
+          Confidence  : 0.9
+          Reason      : non-Aegis attendees: ['northstarpharma.com']
+          Attendees   : 3 (customer domains: northstarpharma.com)
+          Started UTC : 2026-03-15T14:30:00+00:00
+          Duration    : 13.3 min
+
+[ 64/100]  01KQ8C5A044F54EE1774D53C
+          Title       : Aegis / Helix Data - Post-Incident Review
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: helixdata.io)
+          Started UTC : 2026-03-17T11:45:00+00:00
+          Duration    : 35.8 min
+
+[ 65/100]  01KQ8D9A06510DD623EFB1A6
+          Title       : Aegis / Pinnacle Insurance - Detect Roadmap Review
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 2 (customer domains: pinnacleins.com)
+          Started UTC : 2026-04-16T13:00:00+00:00
+          Duration    : 47.9 min
+
+[ 66/100]  01KQ92EA85FE4C537400227D
+          Title       : Support Case #8811 - Blackridge Investments Custom Compliance Template
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 2 (customer domains: blackridgeinvest.com)
+          Started UTC : 2026-04-25T17:15:00+00:00
+          Duration    : 9.3 min
+
+[ 67/100]  01KQ94C2B8B9B4668F3D3491
+          Title       : Support Case #6573 - Ridgeline Logistics Detect Data Gaps
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 3 (customer domains: ridgelinelogistics.com)
+          Started UTC : 2026-03-13T10:30:00+00:00
+          Duration    : 17.6 min
+
+[ 68/100]  01KQ9772B2348F500FB09D1E
+          Title       : Support Case #3677 - Coastal Living Co MFA Token Failures
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 2 (customer domains: coastalliving.com)
+          Started UTC : 2026-02-24T16:45:00+00:00
+          Duration    : 13.9 min
+
+[ 69/100]  01KQ9A6BE09D73A9BB5798C7
+          Title       : Support Case #3615 - Nimbus Platform Custom Report Request
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 2 (customer domains: nimbusplatform.com)
+          Started UTC : 2026-02-10T15:30:00+00:00
+          Duration    : 14.1 min
+
+[ 70/100]  01KQ9BB82FD97C9607D57E90
+          Title       : Aegis / Coastal Living Co - Onboarding Kickoff
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 2 (customer domains: coastalliving.com)
+          Started UTC : 2026-02-04T11:00:00+00:00
+          Duration    : 30.8 min
+
+[ 71/100]  01KQ9BCA1794C9472726FFAD
+          Title       : Comply v2 - Adoption Metrics Review
+          Call type   : INTERNAL
+          Confidence  : 0.8
+          Reason      : only Aegis attendees, no other strong signal
+          Attendees   : 5 (customer domains: (none — Aegis only))
+          Started UTC : 2026-04-22T14:45:00+00:00
+          Duration    : 30.9 min
+
+[ 72/100]  01KQA0F0BE68E74D66EB4171
+          Title       : Competitive Response Strategy
+          Call type   : INTERNAL
+          Confidence  : 0.8
+          Reason      : only Aegis attendees, no other strong signal
+          Attendees   : 5 (customer domains: (none — Aegis only))
+          Started UTC : 2026-04-10T11:30:00+00:00
+          Duration    : 34.3 min
+
+[ 73/100]  01KQA1AFDC1306A000B0C7D9
+          Title       : Aegis / Vanta Health Systems - Backup Strategy Workshop
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: vantahealth.com)
+          Started UTC : 2026-02-28T17:30:00+00:00
+          Duration    : 43.3 min
+
+[ 74/100]  01KQA502E222E2A60330237B
+          Title       : Aegis / Pineridge Systems - Q1 Business Review
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 4 (customer domains: pineridge.io)
+          Started UTC : 2026-03-03T15:15:00+00:00
+          Duration    : 41.5 min
+
+[ 75/100]  01KQA7DFCE1285F52192B34B
+          Title       : Support Case #9856 - Silverline Brands Backup Window Exceeded
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 2 (customer domains: silverlinebrands.com)
+          Started UTC : 2026-04-12T09:00:00+00:00
+          Duration    : 28.4 min
+
+[ 76/100]  01KQAC572C34475A8791F2C3
+          Title       : Protect Team - Quarterly Planning
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 4 (customer domains: (none — Aegis only))
+          Started UTC : 2026-02-23T12:45:00+00:00
+          Duration    : 30.8 min
+
+[ 77/100]  01KQADC32D89E2B76B698E84
+          Title       : Support Case #6635 - Nova Retail Group SSO Login Failures
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 4 (customer domains: novaretail.com)
+          Started UTC : 2026-02-14T13:00:00+00:00
+          Duration    : 24.1 min
+
+[ 78/100]  01KQADF3D76E82BF8BA19AF2
+          Title       : All Hands - February Wrap
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 4 (customer domains: (none — Aegis only))
+          Started UTC : 2026-02-28T11:00:00+00:00
+          Duration    : 20.5 min
+
+[ 79/100]  01KQAEA50436D047BC39CFC7
+          Title       : Aegis / Crestline Wealth - Account Review
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 2 (customer domains: crestlinewealth.com)
+          Started UTC : 2026-02-17T14:30:00+00:00
+          Duration    : 48.7 min
+
+[ 80/100]  01KQAFB8DBF6E1E2FDEF0B75
+          Title       : Aegis / Maplewood Goods - SOC 2 Prep Review
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: maplewoodgoods.com)
+          Started UTC : 2026-02-27T14:45:00+00:00
+          Duration    : 22.4 min
+
+[ 81/100]  01KQB3B16F255B65F39597D0
+          Title       : Comply v2 - Design Review
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 3 (customer domains: (none — Aegis only))
+          Started UTC : 2026-02-12T13:45:00+00:00
+          Duration    : 31.8 min
+
+[ 82/100]  01KQB632F1ADC378C42F2C03
+          Title       : Support Case #7570 - Silverline Brands Comply v2 License Upgrade
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 3 (customer domains: silverlinebrands.com)
+          Started UTC : 2026-04-18T09:15:00+00:00
+          Duration    : 16.3 min
+
+[ 83/100]  01KQB95605C6F873C6036285
+          Title       : Aegis / Forge Industries - PCI DSS Compliance Review
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: forgeindustries.com)
+          Started UTC : 2026-04-09T11:15:00+00:00
+          Duration    : 24.4 min
+
+[ 84/100]  01KQBB7C4D4789DB2F3DA9C2
+          Title       : Support Case #1750 - Vanta Health Systems SIEM Connector Issue
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 4 (customer domains: vantahealth.com)
+          Started UTC : 2026-02-18T12:30:00+00:00
+          Duration    : 29.7 min
+
+[ 85/100]  01KQBBF753B44DE677670E6D
+          Title       : Support Case #6147 - Summit Trust Detect Alert Delays
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 3 (customer domains: summittrust.com)
+          Started UTC : 2026-04-15T12:30:00+00:00
+          Duration    : 16.7 min
+
+[ 86/100]  01KQC1267BEB344076DD7656
+          Title       : Aegis / Ironclad Financial - Account Recovery Check-in
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 4 (customer domains: ironcladfinancial.com)
+          Started UTC : 2026-03-28T12:30:00+00:00
+          Duration    : 35.3 min
+
+[ 87/100]  01KQC166F678CBA584AAFF8B
+          Title       : Support Case #7615 - Crestline Wealth Group Policy Sync Delay
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 2 (customer domains: crestlinewealth.com)
+          Started UTC : 2026-04-27T10:15:00+00:00
+          Duration    : 20.7 min
+
+[ 88/100]  01KQC3A2EBC501837E973B16
+          Title       : Aegis / Frostbyte AI - Identity Module Setup
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 4 (customer domains: frostbyte.ai)
+          Started UTC : 2026-02-19T10:30:00+00:00
+          Duration    : 32.3 min
+
+[ 89/100]  01KQCA6EA8B603EBB6C9FE34
+          Title       : Aegis / Ridgeline Logistics - Identity Roadmap Discussion
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 2 (customer domains: ridgelinelogistics.com)
+          Started UTC : 2026-03-07T09:00:00+00:00
+          Duration    : 28.6 min
+
+[ 90/100]  01KQCF9872BF130D33B1B5EC
+          Title       : Comply v2 - Launch Day Checklist
+          Call type   : INTERNAL
+          Confidence  : 0.8
+          Reason      : only Aegis attendees, no other strong signal
+          Attendees   : 3 (customer domains: (none — Aegis only))
+          Started UTC : 2026-04-04T16:45:00+00:00
+          Duration    : 41.6 min
+
+[ 91/100]  01KQD1270E98A7DFC55ADCF8
+          Title       : Protect Performance - Scalability Concerns
+          Call type   : INTERNAL
+          Confidence  : 0.8
+          Reason      : only Aegis attendees, no other strong signal
+          Attendees   : 4 (customer domains: (none — Aegis only))
+          Started UTC : 2026-04-15T16:45:00+00:00
+          Duration    : 23.5 min
+
+[ 92/100]  01KQD199788883B6F18C81E8
+          Title       : Aegis / Atlas Precision - Annual Review & Renewal
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: atlasprecision.com)
+          Started UTC : 2026-04-28T12:45:00+00:00
+          Duration    : 29.7 min
+
+[ 93/100]  01KQD4D9DEBA2D55AC2AA9F5
+          Title       : Aegis / Keystone Health - Renewal Planning
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: keystonehealth.com)
+          Started UTC : 2026-03-09T16:45:00+00:00
+          Duration    : 28.5 min
+
+[ 94/100]  01KQDD5172176D02DB51360A
+          Title       : Support Case #3286 - Vanta Health Systems API Integration Error
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 2 (customer domains: vantahealth.com)
+          Started UTC : 2026-02-03T10:00:00+00:00
+          Duration    : 21.0 min
+
+[ 95/100]  01KQE110900B8A65D80AE694
+          Title       : Detect Outage - Root Cause Analysis
+          Call type   : INTERNAL
+          Confidence  : 0.8
+          Reason      : only Aegis attendees, no other strong signal
+          Attendees   : 5 (customer domains: (none — Aegis only))
+          Started UTC : 2026-03-14T14:30:00+00:00
+          Duration    : 15.9 min
+
+[ 96/100]  01KQEDB92E33CF9945A7F71B
+          Title       : URGENT: Cobalt Software - Aegis Detect Dashboard Down
+          Call type   : EXTERNAL
+          Confidence  : 0.9
+          Reason      : non-Aegis attendees: ['cobaltsoftware.com']
+          Attendees   : 2 (customer domains: cobaltsoftware.com)
+          Started UTC : 2026-03-10T13:15:00+00:00
+          Duration    : 13.4 min
+
+[ 97/100]  01KQEDE682B4A8D67C657CF1
+          Title       : Support Case #3103 - Silverline Brands Detect False Positives After Patch
+          Call type   : SUPPORT
+          Confidence  : 0.99
+          Reason      : title matches support-case pattern
+          Attendees   : 3 (customer domains: silverlinebrands.com)
+          Started UTC : 2026-03-16T16:15:00+00:00
+          Duration    : 13.8 min
+
+[ 98/100]  01KQF9600A904ADE8605B3F0
+          Title       : Detect Team - Reliability Sprint Retro
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 3 (customer domains: (none — Aegis only))
+          Started UTC : 2026-04-28T10:45:00+00:00
+          Duration    : 18.5 min
+
+[ 99/100]  01KQFEEFFF8E80B0DFD10880
+          Title       : SOC 2 Type II - Final Review
+          Call type   : INTERNAL
+          Confidence  : 0.95
+          Reason      : internal-meeting keyword in title
+          Attendees   : 4 (customer domains: (none — Aegis only))
+          Started UTC : 2026-04-20T09:30:00+00:00
+          Duration    : 40.4 min
+
+[100/100]  01KQFFC0F889AE8CFEE7A00D
+          Title       : Aegis / Blackridge Investments - Renewal Discussion
+          Call type   : EXTERNAL
+          Confidence  : 0.99
+          Reason      : title format 'Aegis / <Customer>'
+          Attendees   : 3 (customer domains: blackridgeinvest.com)
+          Started UTC : 2026-02-07T17:45:00+00:00
+          Duration    : 54.1 min
+

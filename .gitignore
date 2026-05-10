@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+build/
+dist/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.venv/
+venv/
+env/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Pipeline outputs (regenerated; not source of truth)
+outputs/*.csv
+outputs/*.json
+outputs/figures/*.png
+
+# Local datasets (never check in transcripts)
+dataset/
+data/
+*.zip
+
+# Node (only used to build the deck)
+node_modules/
+package-lock.json
