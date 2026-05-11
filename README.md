@@ -131,6 +131,13 @@ ti-walkthrough --data dataset
 This is the closest equivalent to "run the notebook top-to-bottom" — every analysis module
 prints a representative DataFrame, in order, with banners.
 
+### Regenerate the slide deck (optional — checked-in PPTX is current)
+
+```bash
+cd scripts && npm install pptxgenjs && node build_deck.js
+# writes ../docs/Transcript_Intelligence_Findings.pptx
+```
+
 ### Regenerate the csv and text files that provides the classification to each of the data samples in the data set
 
 ```bash
